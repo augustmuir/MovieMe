@@ -54,7 +54,6 @@ const SearchBar = ({ showResults, setShowResults }: { showResults: boolean; setS
               type="search"
               name="search"
               ref={searchRef}
-              autoFocus
               onChange={() => {
                 search();
               }}
