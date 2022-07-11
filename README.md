@@ -56,6 +56,6 @@ OMDB_KEY = *****
 Start the server locally and navigate to [NEXT_PUBLIC_SERVER / localhost:port](http://localhost:3000)
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
