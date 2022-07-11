@@ -32,7 +32,6 @@ const SearchBar = ({ showResults, setShowResults }: { showResults: boolean; setS
       setShowResults(true);
       searchRef.current.focus();
     } catch (e) {
-      console.error("Search error");
       return;
     }
   }
@@ -84,7 +83,7 @@ const SearchBar = ({ showResults, setShowResults }: { showResults: boolean; setS
             {searchResults.length === 0 ? (
               <div>&nbsp;</div>
             ) : (
-              <div className="origin-top-left -0 mt-2 w-full rounded-md shadow-2xl py-1 bg-gray-50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 px-4" onClick={(e) => e.stopPropagation()}>
+              <div className="origin-top-left -0 mt-2 w-full rounded-md shadow-2xl py-1 bg-gray-50 ring-1 ring-black ring-opacity-5 focus:outline-none z-50 px-4 overflow-y-scroll max-h-96 sm:max-h-screen" onClick={(e) => e.stopPropagation()}>
                 <div className="pb-2 text-lg font-semibold text-gray-900">Search Results</div>
                 <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-4 sm:mt-0">
                   {searchResults.map((result) => (

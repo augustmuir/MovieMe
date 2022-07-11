@@ -76,6 +76,9 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }: { sideBarOpen: boolean; setSid
                       <Link href={item.href} key={item.name}>
                         <a
                           key={item.name}
+                          onClick={() => {
+                            setSideBarOpen(false);
+                          }}
                           className={classNames(
                             item.name === currentTab ? "bg-gray-100 text-gray-900" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                             "group flex items-center px-2 py-2 text-base font-medium rounded-md"
